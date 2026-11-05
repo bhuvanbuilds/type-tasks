@@ -1,9 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // ID counter
 let nextId = 1;
 // Add a new task
-function addTask(tasks, title) {
+export function addTask(tasks, title) {
     const newTask = {
         id: nextId++,
         title: title,
@@ -12,13 +10,13 @@ function addTask(tasks, title) {
     return [...tasks, newTask];
 }
 // Mark a task as done
-function completeTask(tasks, id) {
+export function completeTask(tasks, id) {
     return tasks.map(task => task.id === id
         ? { ...task, status: "done" }
         : task);
 }
 // Filter tasks by status
-function filterByStatus(tasks, status) {
+export function filterByStatus(tasks, status) {
     return tasks.filter(task => task.status === status);
 }
 // ORIGINAL OPERATION: Delete a task

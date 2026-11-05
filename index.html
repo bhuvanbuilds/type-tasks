@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Stay Productive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <p class="eyebrow">PERSONAL PRODUCTIVITY</p>
+            <h1>TaskFlow<span>.</span></h1>
+            <p class="subtitle">A little progress every day.</p>
+        </header>
+
+        <section class="add-section">
+            <input
+                type="text"
+                id="title"
+                placeholder="What needs to get done?"
+            >
+            <button id="add">Add task +</button>
+        </section>
+
+        <section class="filters">
+            <button class="filter active" data-status="all">All</button>
+            <button class="filter" data-status="todo">To do</button>
+            <button class="filter" data-status="in-progress">In progress</button>
+            <button class="filter" data-status="done">Done</button>
+        </section>
+
+        <section class="tasks-section">
+            <div class="section-heading">
+                <h2>Your tasks</h2>
+                <span id="count">0 tasks</span>
+            </div>
+
+            <ul id="list"></ul>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
